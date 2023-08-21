@@ -4,20 +4,14 @@
 #An Anagram is a word or phrase formed by rearranging the letters of a different
 #word or phrase, typically using all the original letters exactly once.
 
-class Solution(object):
-    def isAnagram(self, s, t):
-        """
-        :type s: str
-        :type t: str
-        :rtype: bool
-        """
-        n = 0
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
 
         if len(s) != len(t):
             return False
 
         for i in s:
-            if(s.count(i) != t.count(i)):
+            if s.count(i) != t.count(i):
                 return False
-
+        
         return True
