@@ -12,7 +12,8 @@ class Solution:
         
         s = ''.join(filter(str.isalnum, s))
         s = s.lower()
-
+        
+        #return s == s[::-1] # True if s equal to it's reverse
         i: int = 0
         j: int = len(s)-1
         while i < j:
@@ -21,3 +22,4 @@ class Solution:
             i +=1
             j -= 1
         return True
+
