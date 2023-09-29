@@ -5,6 +5,11 @@
 
 # Return the head of the merged linked list.
 
+
+# Allow Optional typing
+from typing import Optional
+
+
 # Definition for singly-linked list.
 class ListNode:
     def __init__(self, val=0, next=None):
@@ -13,11 +18,12 @@ class ListNode:
 
 
 class Solution:
-    def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
+    def mergeTwoLists(self, list1: Optional[ListNode],
+                      list2: Optional[ListNode]) -> Optional[ListNode]:
         if not list1 or not list2:
             return list1 if list1 else list2
 
-        merged: Optional[ListNode] = ListNode(None, None)
+        merged: Optional[ListNode] = ListNode(0, None)
         prev: Optional[ListNode] = merged
 
         while list1 and list2:

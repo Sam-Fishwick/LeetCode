@@ -1,5 +1,9 @@
-# Given the head of a singly linked list, reverse the list, and return the 
+# Given the head of a singly linked list, reverse the list, and return the
 # reversed list.
+
+# Allow Optional typing
+from typing import Optional
+
 
 # Definition for singly-linked list.
 class ListNode:
