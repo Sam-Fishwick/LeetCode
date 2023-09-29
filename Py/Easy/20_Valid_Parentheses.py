@@ -13,10 +13,10 @@ from collections import deque
 class Solution:
     def isValid(self, s: str) -> bool:
         stack = deque()
-        hash_map = {')': '(', ']': '[', '}': '{'}
+        hashmap = {')': '(', ']': '[', '}': '{'}
         for char in s:
-            if char in ')]}':
-                if not stack or stack.pop() != hash_map.get(char):
+            if char in hashmap.keys():
+                if not stack or stack.pop() != hashmap.get(char):
                     return False
             else:
                 stack.append(char)
